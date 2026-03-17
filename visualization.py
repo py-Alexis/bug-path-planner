@@ -8,9 +8,6 @@ from bug import bug1, bug2
 from utils import image_to_binary_matrix, select_start_end
 
 
-CURRENT_IMAGE_PATH = "images/Spirale.png"
-
-
 def visualize_bug1_vs_bug2(
 	matrix,
 	path1,
@@ -97,18 +94,15 @@ def visualize_bug1_vs_bug2(
 		blit=True,
 		repeat=False,
 	)
-	gif_path = Path("images") / f"{Path(CURRENT_IMAGE_PATH).stem}.gif"
-	print(f"Saving GIF to: {gif_path}")
-	ani.save(gif_path, writer="pillow", fps=max(1, int(round(1000 / interval_ms))))
 	plt.tight_layout()
 	plt.show()
+	return ani
 
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument("image_path", nargs="?", default="images/Spirale.png")
 	args = parser.parse_args()
-	CURRENT_IMAGE_PATH = args.image_path
 
 	print("Usage: python3 visualization.py [image_path]")
 	print("No file provided -> default: images/Spirale.png")
