@@ -59,6 +59,8 @@ Behavior:
 
 ## Examples
 
+the gif shown here are pretty slow but the real matplotlib output is much faster and smother
+
 ### Spirale
 
 ![Spirale example](images/Spirale.gif)
