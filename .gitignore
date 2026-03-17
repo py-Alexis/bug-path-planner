@@ -1,1 +1,2 @@
-ressources_TP_PLANI/
+__pycache__/
+*.py[cod]
